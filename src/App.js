@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container, Typography, Box } from '@mui/material';
+import Search from './components/Search';
+import Visualization from './components/Visualization';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="lg">
+      <Typography variant="h4" gutterBottom>University Information System</Typography>
+      <Box mb={4}>
+        <Search />
+      </Box>
+      <Box>
+        <Visualization />
+      </Box>
+    </Container>
   );
 }
 
